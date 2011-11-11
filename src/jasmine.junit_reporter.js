@@ -165,6 +165,11 @@
                 fs.closeSync(fd);
                 return;
             } catch (g) {}
+
+            // UIAutomation
+            try {
+                UIALogger.logDebug("\n" + text);
+            } catch (h) {}
         },
 
         getFullName: function(suite, isFilename) {
